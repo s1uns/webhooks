@@ -4,10 +4,16 @@ import React, {useState} from 'react';
 import List from './List'
 
 function App() {
+  const [visibleList, setVisibleList] = useState(true);
+
+  const toggleList = () =>{
+    setVisibleList(visible => !visible);
+  }
 
   return (
     <div className="App">
-        <List/>
+        {visibleList && <List/>}
+        <button onClick={toggleList}>Hide/Show list</button>
     </div>
   );
 }
