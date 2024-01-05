@@ -22,3 +22,13 @@ li {
   align-items: flex-start;
   margin-right:10px;
 }
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.buttons button{
+  align-self: center;
+  margin-bottom: 5px;
+}

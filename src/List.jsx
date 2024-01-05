@@ -52,7 +52,7 @@ const List = () => {
 
     const addNumber = () => {
         const randomNum = Math.round(Math.random() * 10);
-        setItems(items => [...items, randomNum]);
+        setItems((items) => [...items, randomNum]);
     };
 
     useEffect(() => {
@@ -91,10 +91,11 @@ const List = () => {
                     return <li key={index}>{item}</li>;
                 })}
             </ul>
-
-            <button onClick={addNumber}>New number</button>
-            <button onClick={start}>Start</button>
-            <button onClick={stop}>Stop</button>
+            <div className="buttons">
+                <button onClick={addNumber}>New number</button>
+                <button onClick={start}>Start</button>
+                <button onClick={stop}>Stop</button>
+            </div>
         </>
     );
 };
